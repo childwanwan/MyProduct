@@ -1,0 +1,13 @@
+create table book(
+	id varchar2(50) primary key,
+	name varchar2(50),
+	price number(4,2),
+	pnum int,
+	category varchar2(10),
+	description varchar2(300)
+);
+
+
+insert into book(id,name,price,pnum,category,description) values('1001','鹿鼎记','32.5',200,'武侠','鹿为鼎所困，在鼎的压力下生活。。。');
+insert into book(id,name,price,pnum,category,description) values('1002','笑傲江湖','30.5',250,'武侠','江湖恩怨恨不休，人来人往都是客。。。');
+auto_increment

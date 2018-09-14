@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <display-name></display-name>
+  <filter>
+    <filter-name>EncodingFilter</filter-name>
+    <filter-class>www.xiaowanwan.myproduct.web.filter.EncodingFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>EncodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+   <filter>
+    <filter-name>RoleFilter</filter-name>
+    <filter-class>www.xiaowanwan.myproduct.web.filter.RoleFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>RoleFilter</filter-name>
+    <url-pattern>/admin/*</url-pattern>
+  </filter-mapping>
+  
+  <servlet>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>www.xiaowanwan.myproduct.web.servlet.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/register</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>CheckImgServlet</servlet-name>
+    <servlet-class>www.xiaowanwan.myproduct.web.servlet.CheckImgServlet</servlet-class>
+  </servlet>
+   <servlet>
+    <servlet-name>PageServlet</servlet-name>
+    <servlet-class>www.xiaowanwan.myproduct.web.servlet.PageServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ActiveServlet</servlet-name>
+    <servlet-class>www.xiaowanwan.myproduct.web.servlet.ActiveServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>www.xiaowanwan.myproduct.web.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>MyAccount</servlet-name>
+    <servlet-class>www.xiaowanwan.myproduct.web.servlet.MyAccount</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FindUserById</servlet-name>
+    <servlet-class>www.xiaowanwan.myproduct.web.servlet.FindUserById</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ModifyUserServlet</servlet-name>
+    <servlet-class>www.xiaowanwan.myproduct.web.servlet.ModifyUserServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LogOut</servlet-name>
+    <servlet-class>www.xiaowanwan.myproduct.web.servlet.LogOut</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CreateOrderServlet</servlet-name>
+    <servlet-class>www.xiaowanwan.myproduct.web.servlet.CreateOrderServlet</servlet-class>
+  </servlet>
+	
+	
+	<!-- 复制的配置 -->
+	<servlet>
+    <servlet-name>BookListServlet</servlet-name>
+    <servlet-class>www.xiaowanwan.myproduct.web.servlet.BookListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddBookServlet</servlet-name>
+    <servlet-class>www.xiaowanwan.myproduct.web.servlet.AddBookServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FindBookByIdServlet</servlet-name>
+    <servlet-class>www.xiaowanwan.myproduct.web.servlet.FindBookByIdServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UpdateBookServlet</servlet-name>
+    <servlet-class>www.xiaowanwan.myproduct.web.servlet.UpdateBookServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DelBookServlet</servlet-name>
+    <servlet-class>www.xiaowanwan.myproduct.web.servlet.DelBookServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DelAllBooksServlet</servlet-name>
+    <servlet-class>www.xiaowanwan.myproduct.web.servlet.DelAllBooksServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SearchBooksServlet</servlet-name>
+    <servlet-class>www.xiaowanwan.myproduct.web.servlet.SearchBooksServlet</servlet-class>
+  </servlet>
+ 
+  <servlet>
+    <servlet-name>findBookInfoServlet</servlet-name>
+    <servlet-class>www.xiaowanwan.myproduct.web.servlet.FindBookInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CkEmailServlet</servlet-name>
+    <servlet-class>www.xiaowanwan.myproduct.web.servlet.CkEmailServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SearchBookAJAXServlet</servlet-name>
+    <servlet-class>www.xiaowanwan.myproduct.web.servlet.SearchBookAJAXServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>AddCartServlet</servlet-name>
+    <servlet-class>www.xiaowanwan.myproduct.web.servlet.AddCartServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ChangeNumServlet</servlet-name>
+    <servlet-class>www.xiaowanwan.myproduct.web.servlet.ChangeNumServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>DelOrderItemsByOrderId</servlet-name>
+    <servlet-class>www.xiaowanwan.myproduct.web.servlet.DelOrderItemsByOrderId</servlet-class>
+  </servlet>
+   <servlet>
+    <servlet-name>FindOrderByUserId</servlet-name>
+    <servlet-class>www.xiaowanwan.myproduct.web.servlet.FindOrderByUserId</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FindOrderItemsByOrderId</servlet-name>
+    <servlet-class>www.xiaowanwan.myproduct.web.servlet.FindOrderItemsByOrderId</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>PayOnlineServlet</servlet-name>
+    <servlet-class>www.xiaowanwan.myproduct.web.servlet.PayOnlineServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CallBackServlet</servlet-name>
+    <servlet-class>www.xiaowanwan.myproduct.web.servlet.CallBackServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FindOrders</servlet-name>
+    <servlet-class>www.xiaowanwan.myproduct.web.servlet.FindOrders</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>FindProductBySearch</servlet-name>
+    <servlet-class>www.xiaowanwan.myproduct.web.servlet.FindProductBySearch</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SearchBooksSell</servlet-name>
+    <servlet-class>www.xiaowanwan.myproduct.web.servlet.SearchBooksSell</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>FindOrderByUserId</servlet-name>
+    <url-pattern>/findOrderByUserId</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindOrderItemsByOrderId</servlet-name>
+    <url-pattern>/findOrderItemsByOrderId</url-pattern>
+  </servlet-mapping>
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>BookListServlet</servlet-name>
+    <url-pattern>/bookListServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddBookServlet</servlet-name>
+    <url-pattern>/addBookServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindBookByIdServlet</servlet-name>
+    <url-pattern>/findBookByIdServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateBookServlet</servlet-name>
+    <url-pattern>/updateBookServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DelBookServlet</servlet-name>
+    <url-pattern>/delBookServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DelAllBooksServlet</servlet-name>
+    <url-pattern>/delAllBooksServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SearchBooksServlet</servlet-name>
+    <url-pattern>/searchBooksServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>findBookInfoServlet</servlet-name>
+    <url-pattern>/findBookInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CkEmailServlet</servlet-name>
+    <url-pattern>/ckEmailServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SearchBookAJAXServlet</servlet-name>
+    <url-pattern>/searchBookAJAXServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddCartServlet</servlet-name>
+    <url-pattern>/addCartServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChangeNumServlet</servlet-name>
+    <url-pattern>/changeNumServlet</url-pattern>
+  </servlet-mapping>	
+ 	 	<!-- 复制结束 -->
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>CheckImgServlet</servlet-name>
+    <url-pattern>/imageCode</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PageServlet</servlet-name>
+    <url-pattern>/pageServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ActiveServlet</servlet-name>
+    <url-pattern>/activeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/loginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MyAccount</servlet-name>
+    <url-pattern>/myAccount</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindUserById</servlet-name>
+    <url-pattern>/findUserById</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ModifyUserServlet</servlet-name>
+    <url-pattern>/modifyUserServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LogOut</servlet-name>
+    <url-pattern>/logOut</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CreateOrderServlet</servlet-name>
+    <url-pattern>/createOrderServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DelOrderItemsByOrderId</servlet-name>
+    <url-pattern>/delOrderItemsByOrderId</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PayOnlineServlet</servlet-name>
+    <url-pattern>/payOnlineServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CallBackServlet</servlet-name>
+    <url-pattern>/callBackServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindOrders</servlet-name>
+    <url-pattern>/findOrders</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindProductBySearch</servlet-name>
+    <url-pattern>/findProductBySearch</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SearchBooksSell</servlet-name>
+    <url-pattern>/searchBooksSell</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
